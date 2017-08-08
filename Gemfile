@@ -14,10 +14,13 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
+gem 'active_model_serializers', '~> 0.10.0'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'byebug', platform: :mri
+  gem 'pry'
+  gem 'database_cleaner'
 end
 
 group :development do
