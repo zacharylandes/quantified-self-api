@@ -1,0 +1,17 @@
+<h1>Welcome to Turing School's Quantified Self API!</h1>
+
+<div class="instructions">
+  <ul>The following endpoints are available. All endpoints will return the data as JSON.
+
+    <li><code>GET api/v1/foods</code> - returns all foods currently in the database</li>
+
+    <li><code>GET api/v1/foods/:id</code> - returns the food object with the specific id you've passed in</li>
+
+    <li><code>POST api/v1/foods</code> - allows creating a new food with the parameters: <br><code>{ food: { name: "Name of food here", calories: "Calories here"} }</code><br> If food is successfully created, the food item will be returned. Both name and calories are required fields.</li>
+
+    <li><code>PATCH api/v1/foods/:id</code> - allows one to update an existing food with the parameters:<br> <code>{ food: { name: "Name of food here", calories: "Calories here"} }</code><br> If food is successfully updated, the food item will be returned.</li>
+
+    <li><code>DELETE api/v1/foods/:id</code> - will delete the food with the id passed in</li>
+
+  </ul>
+</div>
