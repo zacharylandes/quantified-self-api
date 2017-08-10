@@ -15,6 +15,26 @@ body {
   background-color: #F1EDEC;
 }
 
+.container {
+  margin: 5%;
+}
+
 code {
   font-weight: bold;
+}
+
+.instructions > p {
+  text-align: center;
+  font-weight: bold;
+}
+
+.api p {
+  font-weight: bold;
+  color: #18DDC2;
+  margin-bottom: 0;
+}
+
+.api {
+  border-top: 1px dotted;
+  margin-top: 5%;
 }
