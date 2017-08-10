@@ -1,4 +1,7 @@
-foods = [
+Food.destroy_all
+Meal.destroy_all
+
+FOODS = [
           ["Banana", 150],
           ["Bagel Bites - Four Cheese", 650],
           ["Chicken Burrito", 800],
@@ -13,7 +16,14 @@ foods = [
           ["Apple", 220]
         ]
 
-foods.each do |food|
+MEALS = [ "Breakfast", "Snack", "Lunch", "Dinner" ]
+
+FOODS.each do |food|
   new_food = Food.create!(name: food.first, calories: food.last)
   puts "Created #{new_food.name}"
+end
+
+MEALS.each do |meal_name|
+  meal = Meal.create!(name: meal_name)
+  puts "Created #{meal.name}"
 end
