@@ -16,4 +16,9 @@ RSpec.describe Meal, type: :model do
       end
     end
   end
+
+  describe "associations" do
+    it { is_expected.to have_many(:meal_foods)}
+    it { is_expected.to have_many(:foods)}
+  end
 end

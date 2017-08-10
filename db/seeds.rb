@@ -27,3 +27,10 @@ MEALS.each do |meal_name|
   meal = Meal.create!(name: meal_name)
   puts "Created #{meal.name}"
 end
+
+Meal.all.each do |meal|
+  3.times do
+    random_id = rand(Food.first.id..Food.last.id)
+    meal.foods << Food.find(random_id)
+  end
+end
