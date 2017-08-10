@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       resources :foods, except: [:new, :edit]
-      post "/meals/:id/foods", to: "meals#create", as: :meal_foods
+      post "/meals/:meal_id/foods/:id", to: "meals#create", as: :meal_foods
       delete "/meals/:meal_id/foods/:id", to: "meals#destroy", as: :meal_food
     end
   end
