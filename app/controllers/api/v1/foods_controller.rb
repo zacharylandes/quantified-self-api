@@ -35,8 +35,12 @@ class Api::V1::FoodsController < ApplicationController
 
   def destroy
     food = Food.find(params[:id])
-    food.destroy
-    render json: {}, status: :no_content
+    if food
+      food.destroy
+      render json: {}, status: :no_content
+    else
+      render json: { "Error": "Can't find specified food to delete" }, status: 404
+    end
   end
 
   private
